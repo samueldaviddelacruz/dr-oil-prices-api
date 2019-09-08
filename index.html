@@ -44,7 +44,7 @@
           <div id="introduction" data-traverse-target="introduction">
             <div class="doc-row">
               <div class="doc-copy">
-                <p>An API that allows to retrieve the oil prices of the dominican Republic</p>
+                <p>An API that allows to retrieve the oil prices of the dominican Republic, each Friday the prices of the following week are available for queriying</p>
               </div>
               <div class="doc-examples">
                 <section>
@@ -87,7 +87,7 @@
                       <div class="prop-subtitle"> in query </div>
                     </div>
                     <div class="prop-value">
-                      <p>Returns a history of oil prices by week, given a week date returns only those of the provided date in MM/DD/YYYY format</p>
+                      <p>Allows to narrow down the list of retrieved oil prices to a provided Friday date in MM/DD/YYYY format</p>
                     </div>
                   </div>
                 </section>
@@ -157,11 +157,14 @@
                   <div class="json-inner-schema">
                     <section class="json-schema-properties">
                       <dl>
-                        <dt data-property-name="date">
+                        <dt data-property-name="date" class="has-description">
                           <span class="json-property-name">date:</span>
                           <span class="json-property-type">string</span>
                           <span class="json-property-range" title="Value limits"></span>
                         </dt>
+                        <dd>
+                          <p>represents the date the oil price was stored</p>
+                        </dd>
                         <dt data-property-name="title">
                           <span class="json-property-name">title:</span>
                           <span class="json-property-type">string</span>
