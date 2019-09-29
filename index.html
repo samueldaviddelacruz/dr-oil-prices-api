@@ -58,7 +58,7 @@
                     <span>https</span>
                   </h5>
                   <h5>Version:
-                    <span>1.0</span>
+                    <span>1.1</span>
                   </h5>
                 </section>
               </div>
@@ -78,16 +78,30 @@
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
-                      <div class="prop-title">date:
+                      <div class="prop-title">startDate:
                         <span class="prop-type">
-                          <span class="json-property-type">string</span>
+                          <span class="json-property-type">number</span>
                           <span class="json-property-range" title="Value limits"></span>
                         </span>
                       </div>
-                      <div class="prop-subtitle"> in query </div>
+                      <div class="prop-subtitle"> in startDate </div>
                     </div>
                     <div class="prop-value">
-                      <p>Allows to narrow down the list of retrieved oil prices to a provided Friday date in MM/DD/YYYY format</p>
+                      <p>Allows to narrow down the list of retrieved oil prices, given a starting date in number of milliseconds elapsed since January 1, 1970 00:00:00 UTC</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">endDate:
+                        <span class="prop-type">
+                          <span class="json-property-type">number</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                      <div class="prop-subtitle"> in endDate </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Allows to narrow down the list of retrieved oil prices, given a ending date in number of milliseconds elapsed since January 1, 1970 00:00:00 UTC</p>
                     </div>
                   </div>
                 </section>
@@ -129,7 +143,8 @@
     <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;currency&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    <span class="hljs-attr">&quot;currency&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;timeMeasured&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
   }
 ]
 </code></pre> </body>
@@ -163,7 +178,7 @@
                           <span class="json-property-range" title="Value limits"></span>
                         </dt>
                         <dd>
-                          <p>represents the date the oil price was stored</p>
+                          <p>The date the oil price was measured, format:mm/dd//yyyy</p>
                         </dd>
                         <dt data-property-name="title">
                           <span class="json-property-name">title:</span>
@@ -180,6 +195,14 @@
                           <span class="json-property-type">string</span>
                           <span class="json-property-range" title="Value limits"></span>
                         </dt>
+                        <dt data-property-name="timeMeasured" class="has-description">
+                          <span class="json-property-name">timeMeasured:</span>
+                          <span class="json-property-type">number</span>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </dt>
+                        <dd>
+                          <p>The date the oil price was measured, format:number of milliseconds elapsed since January 1, 1970 00:00:00 UTC</p>
+                        </dd>
                       </dl>
                     </section>
                   </div>
@@ -196,7 +219,8 @@
     <span class="hljs-attr">&quot;date&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;price&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-    <span class="hljs-attr">&quot;currency&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    <span class="hljs-attr">&quot;currency&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;timeMeasured&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
   }
 ]
 </code></pre> </body>
